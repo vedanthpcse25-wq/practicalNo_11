@@ -85,7 +85,7 @@
             var dropArea = document.getElementById("dropArea");
             dropArea.appendChild(document.getElementById(data));
         }
-function getLocation() {
+        function getLocation() {
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(showPosition, showError);
             } else {
@@ -104,7 +104,6 @@ function getLocation() {
             document.getElementById("location").innerHTML =
                 "Error: " + error.message;
         }
-        
         function saveData() {
             var name = document.getElementById("name").value;
             localStorage.setItem("username", name);
@@ -121,8 +120,10 @@ function getLocation() {
                 document.getElementById("result").innerHTML =
                     "No data found!";
             }
-        } 
-        </script>
-</body>
-</html>
+        }
+        
+    </script>
+    
+</body>    
+    </html>   
 
