@@ -104,5 +104,29 @@ function getLocation() {
             document.getElementById("location").innerHTML =
                 "Error: " + error.message;
         }
+        
+        function saveData() {
+            var name = document.getElementById("name").value;
+            localStorage.setItem("username", name);
+            alert("Data Saved!");
+        }
+
+        function loadData() {
+            var name = localStorage.getItem("username");
+
+            if (name) {
+                document.getElementById("result").innerHTML =
+                    "Stored Name: " + name;
+            } else {
+                document.getElementById("result").innerHTML =
+                    "No data found!";
+            }
+        }
+        
+    
+    
+
         </script>
+</body>
+</html>
 
